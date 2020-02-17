@@ -9,8 +9,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''sh \'mvn -f /var/lib/jenkins/workspace/Git_test/ test -DskipTests=true\'
-sh \'mvn clean package\'
+        sh '''sh \'mvn clean package\'
 '''
       }
     }
