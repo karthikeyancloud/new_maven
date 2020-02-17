@@ -17,6 +17,7 @@ pipeline {
 
         }
 
+        sh 'sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''
       }
     }
 
