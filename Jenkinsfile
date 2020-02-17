@@ -9,11 +9,9 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''sh \'mvn -f /var/lib/jenkins/workspace/Git_test/ test -DskipTests=true /*archieve\'archieve .jar\'*/\'
-				sh \'mvn clean package\'
-				echo \'BOP Module completed\'
-				archiveArtifacts \'multi-module/server/target/*.jar\'
-				sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''''
+        sh '''sh \'mvn -f /var/lib/jenkins/workspace/Git_test/ test -DskipTests=true\'
+sh \'mvn clean package\'
+'''
       }
     }
 
