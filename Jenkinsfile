@@ -14,7 +14,7 @@ pipeline {
           dir(path: '/var/lib/jenkins/workspace/Git_test/') {
             sh 'mvn clean package'
             archiveArtifacts '/var/lib/jenkins/workspace/target/'
-            sh 'sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''
+            sh 'sh \'cp /var/lib/jenkins/workspace/Git_test/single-module/target /var/lib/jenkins/workspace/target/\''
           }
 
         }
