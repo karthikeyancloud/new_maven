@@ -13,7 +13,7 @@ pipeline {
         withMaven(jdk: 'jdk', maven: 'Maven', mavenSettingsConfig: 'f94fe716-8e70-4fb0-bee3-dc588597f4f2') {
           dir(path: '/var/lib/jenkins/workspace/Git_test/') {
             sh 'mvn clean package'
-            archiveArtifacts 'multi-module/server/target/*.jar'
+            archiveArtifacts '/var/lib/jenkins/workspace/target/'
             sh 'sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''
           }
 
