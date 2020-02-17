@@ -16,9 +16,9 @@ pipeline {
             archiveArtifacts 'multi-module/server/target/*.jar'
           }
 
+          sh 'sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''
         }
 
-        sh 'sh \'cp multi-module/server/target/*.jar /var/lib/jenkins/workspace/target/\''
       }
     }
 
