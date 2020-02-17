@@ -9,8 +9,14 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh '''sh \'mvn clean package\'
-'''
+        echo 'Build starting'
+        withMaven(jdk: 'jdk', maven: 'Maven', mavenSettingsConfig: 'f94fe716-8e70-4fb0-bee3-dc588597f4f2') {
+          dir(path: '/var/lib/jenkins/workspace/Git_test/') {
+            sh 'mvn clean package'
+          }
+
+        }
+
       }
     }
 
