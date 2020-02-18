@@ -14,7 +14,7 @@ pipeline {
           dir(path: '/var/lib/jenkins/workspace/Git_test/') {
             sh 'mvn clean package'
             archiveArtifacts 'single-module/target/'
-            sh 'sh cp /single-module/target/*.jar /var/lib/jenkins/workspace/target/'
+            sh 'sh sudo cp /single-module/target/*.jar /var/lib/jenkins/workspace/target/'
           }
 
         }
