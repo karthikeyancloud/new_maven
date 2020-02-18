@@ -11,7 +11,7 @@ pipeline {
       steps {
         echo 'Build starting'
         withMaven(jdk: 'jdk', maven: 'Maven', mavenSettingsConfig: 'f94fe716-8e70-4fb0-bee3-dc588597f4f2') {
-          dir(path: 'var/lib/jenkins/workspace/new_maven_Blue-Ocean/') {
+          dir(path: '/var/lib/jenkins/workspace/new_maven_Blue-Ocean/') {
             sh 'mvn clean package'
             archiveArtifacts 'single-module/target/'
           }
