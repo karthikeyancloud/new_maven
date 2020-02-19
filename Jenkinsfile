@@ -25,7 +25,7 @@ pipeline {
     stage('Docker image') {
       steps {
         echo 'Docker image creation'
-        dir(path: '/var/lib/jenkins/workspace/Git_test/single-module/') {
+        dir(path: '/var/lib/jenkins/workspace/Git_test/') {
           sh 'docker build . -t image:4'
           echo 'image created succesfully'
         }
