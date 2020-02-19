@@ -22,5 +22,16 @@ pipeline {
       }
     }
 
+    stage('Docker image') {
+      steps {
+        echo 'Docker image creation'
+        dir(path: '/var/lib/jenkins/workspace/Git_test/single-module/') {
+          sh 'sudo docker build *. -t test'
+          echo 'image created succesfully'
+        }
+
+      }
+    }
+
   }
 }
