@@ -25,7 +25,7 @@ pipeline {
     stage('Docker image') {
       steps {
         echo 'Docker image creation'
-        dir(path: '/var/lib/jenkins/workspace/new_maven_Blue-Ocean/') {
+        dir(path: '/var/lib/jenkins/workspace/Git_test/') {
           sh 'docker build . -t pushimagess:1'
           echo 'image created succesfully'
         }
