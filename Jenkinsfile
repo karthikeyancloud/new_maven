@@ -26,7 +26,7 @@ pipeline {
       steps {
         echo 'Docker image creation'
         dir(path: '/var/lib/jenkins/workspace/Git_test/') {
-          sh 'docker build . -t alpine:1'
+          sh 'docker build . -t alpine:2'
           echo 'image created succesfully'
         }
 
