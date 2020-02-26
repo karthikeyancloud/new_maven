@@ -40,5 +40,11 @@ pipeline {
       }
     }
 
+    stage('Amazon ECR') {
+      steps {
+        sh 'docker.withRegistry(\'https:/706374438716.dkr.ecr.us-west-2.amazonaws.com\', \'ecr.us-west-2:97b4f584-fe6c-4f90-833d-a21779772031\')'
+      }
+    }
+
   }
 }
