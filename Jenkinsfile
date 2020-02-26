@@ -36,6 +36,7 @@ pipeline {
     stage('Dockerpush') {
       steps {
         sh 'docker login'
+        sh 'docker push karthikeyan18/amazonlinux:firsttry'
       }
     }
 
