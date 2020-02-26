@@ -33,5 +33,11 @@ pipeline {
       }
     }
 
+    stage('Dockerpush') {
+      steps {
+        sh 'docker login'
+      }
+    }
+
   }
 }
